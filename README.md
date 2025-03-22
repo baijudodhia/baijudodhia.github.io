@@ -1,270 +1,130 @@
-# Framework-Independent Portfolio with Web Components
+# Personal Portfolio Website
 
-[![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue)](https://baijudodhia.github.io)
-[![Built with Web Components](https://img.shields.io/badge/Built%20with-Web%20Components-orange)](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
-[![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fbaijudodhia.github.io)](https://baijudodhia.github.io)
 
-A modern portfolio website demonstrating enterprise-level architecture using Web Components and vanilla JavaScript. Built with zero framework dependencies, the project showcases component-based
-design, multi-language support, and dynamic theming through native web technologies.
+## Overview
 
-## 🎯 Key Features
+A modern, performant personal portfolio website built with vanilla JavaScript and bundled using Rollup. The project emphasizes clean architecture, progressive enhancement, and optimal performance
+through modern build tooling.
 
-- **Framework Independence**: Pure JavaScript implementation using Web Components
-- **Multi-language Support**: Dynamic content loading in English, Hindi, and Gujarati
-- **Theme System**: HSL-based color system with system/user preference detection
-- **Progressive Web App**: Offline support and installable capability
-- **Performance Optimized**: Advanced bundling and lazy loading strategies
+## Key Features
 
-## 🏗️ System Architecture
+- 🚀 Optimized build process using Rollup
+- 🎨 Modern CSS with PostCSS processing
+- 📱 Progressive Web App (PWA) support
+- 🌓 Theme support (light mode)
+- 📊 Bundle analysis and optimization
+- 🔍 SEO-friendly with proper meta tags
+- ⚡ No runtime dependencies - pure vanilla JavaScript
 
-### Component Architecture
+## First-Time Setup
 
-```
-lib/
-├── components/        # Reusable Web Components
-├── styles/           # Global styles and themes
-├── utils/           # Utility functions
-├── tools/          # Build tools
-├── tests/         # Test suites
-└── dist/         # Production build output
+### Prerequisites
 
-portfolio/
-├── sections/     # Main application sections
-│   ├── about/   # About section component
-│   ├── skills/  # Skills section component
-│   └── ...      # Other section components
-└── assets/     # Static assets
-```
+- Node.js (v12 or higher)
+- npm (v6 or higher)
 
-### Component Implementation Pattern
+### Installation
 
-```javascript
-class BaseComponent extends HTMLElement {
-  constructor(props = {}, basePath = "", templateHtml = "", templateStyleUrls = []) {
-    super();
-    this.props = props;
-    this.basePath = basePath;
-    this.templateHtml = templateHtml;
-    this.templateStyleUrls = templateStyleUrls;
-    this.attachShadow({ mode: "open" });
-  }
-
-  static get observedAttributes() {
-    return ["language", "theme"];
-  }
-
-  // Lifecycle hooks for component management
-  connectedCallback() {}
-  disconnectedCallback() {}
-  attributeChangedCallback(name, oldValue, newValue) {}
-}
-```
-
-## 🛠️ Prerequisites
-
-- Node.js (LTS version 14+)
-- npm (6+) or yarn (1.22+)
-- Modern browser with Web Components support
-- Git for version control
-
-## 📦 Installation
-
-1. **Clone the Repository**
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/baijudodhia/baijudodhia.github.io.git
    cd baijudodhia.github.io
    ```
 
-2. **Install Dependencies**
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. **Development Server**
+3. Start development server:
+
    ```bash
    npm run dev
    ```
-   Access the site at `http://localhost:3000`
 
-## ⚙️ Configuration
-
-### Environment Variables
-
-```javascript
-// .env
-NODE_ENV = development;
-DEBUG = false;
-```
-
-### Build Configuration
-
-```javascript
-// rollup.config.js
-export default {
-  input: "./lib/index.js",
-  output: {
-    file: "lib/dist/index.min.js",
-    format: "iife",
-    compact: true,
-  },
-  plugins: [
-    /* ... */
-  ],
-  treeshake: {
-    moduleSideEffects: false,
-    propertyReadSideEffects: false,
-  },
-};
-```
-
-## 💻 Development Workflow
-
-### Component Development
-
-1. Create new component in `lib/components/`
-2. Extend `BaseComponent` class
-3. Implement required lifecycle methods
-4. Register using `customElements.define()`
-
-Example:
-
-```javascript
-class NewComponent extends BaseComponent {
-  constructor() {
-    super({
-      id: "new-component",
-      basePath: "/lib/components/new-component",
-      templateHtml: `<div>...</div>`,
-      templateStyleUrls: ["/styles/component.css"],
-    });
-  }
-
-  connectedCallback() {
-    this.render();
-  }
-}
-
-customElements.define("new-component", NewComponent);
-```
-
-### Internationalization
-
-Add language support by creating JSON files in the component's data directory:
-
-```javascript
-// en.component.json
-{
-  "title": "English Title",
-  "description": "English description"
-}
-
-// hi.component.json
-{
-  "title": "हिंदी शीर्षक",
-  "description": "हिंदी विवरण"
-}
-```
-
-### Theme Development
-
-```javascript
-const ThemeSystem = {
-  colors: {
-    primary: {
-      light: (h) => `hsl(${h}, 100%, 50%)`,
-      dark: (h) => `hsl(${h}, 100%, 30%)`,
-    },
-  },
-};
-```
-
-## 🧪 Testing
-
-### Component Testing
-
-```javascript
-describe("ComponentName", () => {
-  let component;
-
-  beforeEach(() => {
-    component = new ComponentName();
-    document.body.appendChild(component);
-  });
-
-  it("should render correctly", () => {
-    const shadow = component.shadowRoot;
-    expect(shadow.querySelector(".content")).toBeTruthy();
-  });
-
-  it("should handle language changes", async () => {
-    await component.loadContent("hi");
-    expect(component.shadowRoot.querySelector(".title")).toHaveTextContent("हिंदी शीर्षक");
-  });
-});
-```
-
-## 🚀 Deployment
-
-### Build Process
-
-1. **Production Build**
-
+4. For production build:
    ```bash
    npm run build
    ```
 
-   This generates optimized assets in `lib/dist/`
+## Codebase Structure
 
-2. **GitHub Pages Deployment**
-   - Push to main branch
-   - GitHub Actions workflow handles deployment
-   - Cache management and asset optimization
+```
+baijudodhia.github.io/
+├── assets/           # Static assets and resources
+├── cdn/             # CDN-ready assets
+├── enable-javascript/# Fallback for users with JS disabled
+├── lib/             # Core library code
+├── portfolio/       # Portfolio-specific components
+├── .github/         # GitHub workflows and configs
+├── index.html       # Main entry point
+├── rollup.config.js # Build configuration
+└── package.json     # Project dependencies and scripts
+```
 
-### Performance Monitoring
+### Key Components
 
-- Lighthouse scores tracking
-- Web Vitals monitoring
-- Error logging via console
-- Analytics integration
+- **Entry Point**: `index.html` serves as the main application entry point
+- **Build System**: `rollup.config.js` manages bundling, optimization, and asset processing
+- **Styles**: PostCSS handles CSS processing with features like:
+  - CSS imports (`postcss-import`)
+  - URL handling (`postcss-url`)
+  - Minification (`cssnano`)
+  - Autoprefixing (`autoprefixer`)
 
-## 🔧 Troubleshooting
+## Development Guide
 
-### Common Issues
+### Build Process
 
-1. **Component Not Rendering**
+The project uses Rollup for bundling with several optimizations:
 
-   - Check browser console for errors
-   - Verify Web Components support
-   - Ensure Shadow DOM attachment
+- JavaScript bundling and minification
+- CSS processing and optimization
+- Asset handling (images, fonts)
+- Bundle analysis and visualization
 
-2. **Style Issues**
+### Available Scripts
 
-   - Verify CSS encapsulation
-   - Check theme variable inheritance
-   - Inspect Shadow DOM styles
+- `npm run dev`: Starts development server with hot reload and bundle analysis
+- `npm run build`: Creates production build in `lib/dist`
 
-3. **Language Loading Fails**
-   - Check network requests
-   - Verify JSON file structure
-   - Ensure correct path resolution
+### Development Tools
 
-## 🤝 Contributing
+- Bundle analysis: View `bundle-analysis.html` after build
+- VS Code settings included for consistent development
+- Prettier configuration for code formatting
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **JavaScript Disabled**:
+
+   - The site automatically redirects to `/enable-javascript/` for graceful degradation
+
+2. **Build Errors**:
+
+   - Clear `lib/dist` directory: `rm -rf lib/dist`
+   - Delete `node_modules` and run `npm install`
+
+3. **Development Server Issues**:
+   - Ensure port 3000 is available
+   - Check for Node.js version compatibility
+
+## Contributing
 
 1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit changes: `git commit -m 'Add YourFeature'`
+4. Push to branch: `git push origin feature/YourFeature`
+5. Submit a pull request
 
 ### Code Style
 
-- Use Prettier for formatting
-- Follow Web Components best practices
-- Maintain component independence
-- Document public APIs
-
-## 📄 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+- Follow existing code formatting (Prettier config provided)
+- Maintain vanilla JavaScript approach - no frameworks
+- Document new features and changes
