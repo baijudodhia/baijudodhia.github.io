@@ -330,13 +330,40 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 1em 0;
+  margin: var(--space-m) 0;
   overflow-x: auto;
 }
 
 .mermaid-diagram svg {
   max-width: 100%;
   height: auto;
+  width: auto;
+}
+
+/* Size Variants for Mermaid Diagrams */
+#markdown-renderer[data-size="xs"] .mermaid-diagram {
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs);
+}
+
+#markdown-renderer[data-size="s"] .mermaid-diagram {
+  font-size: var(--font-size-s);
+  line-height: var(--font-size-s);
+}
+
+#markdown-renderer[data-size="m"] .mermaid-diagram {
+  font-size: var(--font-size-m);
+  line-height: var(--font-size-m);
+}
+
+#markdown-renderer[data-size="l"] .mermaid-diagram {
+  font-size: var(--font-size-l);
+  line-height: var(--font-size-l);
+}
+
+#markdown-renderer[data-size="xl"] .mermaid-diagram {
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl);
 }
 
 .mermaid-loading {
@@ -453,17 +480,15 @@
 @media (max-width: 768px) {
   .mermaid-diagram {
     padding: var(--space-s);
-    font-size: 0.9em;
   }
 
   .mermaid-diagram svg {
-    transform-origin: left top;
-    transform: scale(0.9);
+    width: calc(100% - var(--space-m));
   }
 }
 
 @media (max-width: 480px) {
   .mermaid-diagram svg {
-    transform: scale(0.8);
+    width: calc(100% - var(--space-l));
   }
 }
