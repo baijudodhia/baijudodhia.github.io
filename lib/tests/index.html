@@ -1379,129 +1379,134 @@ ORDER BY name;"
             size="xl"
           ></app-text>
 
+          <!-- Markdown Appearances -->
           <div class="component-demo">
             <app-text
               text="Appearances"
               size="l"
             ></app-text>
             <div class="component-group">
-              <!-- Primary Style -->
+              <!-- Primary - Basic Markdown -->
               <app-markdown-renderer
                 appearance="primary"
                 size="m"
                 shape="curved"
                 content="# Primary Style
 Regular text with **bold** and *italic*
-### Code - Javasript
-```javascript
-const hello = 'world';
-console.log(hello);
-```
 
-<br />
-
-| Header |
-|--------|
-| Content |"
+1. First item
+   - Nested item
+2. Second item
+   - Another nested"
               ></app-markdown-renderer>
 
-              <!-- Secondary Style -->
+              <!-- Secondary - Code Block -->
               <app-markdown-renderer
                 appearance="secondary"
                 size="m"
                 shape="curved"
                 content="# Secondary Style
-Regular text with **bold** and *italic*
-### Code - Javasript
 ```javascript
-const hello = 'world';
-console.log(hello);
-```
-
-<br />
-
-| Header |
-|--------|
-| Content |"
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+```"
               ></app-markdown-renderer>
 
-              <!-- Tertiary Style -->
+              <!-- Tertiary - Mermaid -->
               <app-markdown-renderer
                 appearance="tertiary"
                 size="m"
                 shape="curved"
                 content="# Tertiary Style
-Regular text with **bold** and *italic*
-
-
-### Code - Javasript
-```javascript
-const hello = 'world';
-console.log(hello);
-```
-
-<br />
-
-| Header |
-|--------|
-| Content |"
+```mermaid
+graph TD
+    A[Start] --> B[End]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bfb,stroke:#333
+```"
               ></app-markdown-renderer>
             </div>
           </div>
 
+          <!-- Markdown Sizes -->
           <div class="component-demo">
             <app-text
               text="Sizes"
               size="l"
             ></app-text>
             <div class="component-group">
-              <!-- Extra Small -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="xs"
-                shape="curved"
-                content="### Extra Small Size
-Compact content display"
-              ></app-markdown-renderer>
-
-              <!-- Small -->
+              <!-- Small - Basic Markdown -->
               <app-markdown-renderer
                 appearance="primary"
                 size="s"
                 shape="curved"
                 content="### Small Size
-Regular sized content"
+Regular text with **bold** and *italic*
+
+1. First item
+   - Nested item
+2. Second item
+   - Another nested"
               ></app-markdown-renderer>
 
-              <!-- Medium -->
+              <!-- Medium - Code Block -->
               <app-markdown-renderer
                 appearance="primary"
                 size="m"
                 shape="curved"
                 content="### Medium Size
-Standard content size"
+```javascript
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+
+// Example usage
+console.log(greet('World'));
+```"
               ></app-markdown-renderer>
 
-              <!-- Large -->
+              <!-- Large - Mermaid -->
               <app-markdown-renderer
                 appearance="primary"
                 size="l"
                 shape="curved"
                 content="### Large Size
-Larger content display"
+```mermaid
+graph LR
+    A-->B-->C
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bfb,stroke:#333
+```"
               ></app-markdown-renderer>
 
-              <!-- Extra Large -->
+              <!-- Extra Large - Math -->
               <app-markdown-renderer
                 appearance="primary"
                 size="xl"
                 shape="curved"
                 content="### Extra Large Size
-Maximum content size"
+Block math example:
+$$
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix} =
+\begin{bmatrix}
+ax + by \\
+cx + dy
+\end{bmatrix}
+$$"
               ></app-markdown-renderer>
             </div>
           </div>
 
+          <!-- Markdown Shapes -->
           <div class="component-demo">
             <app-text
               text="Shapes"
@@ -1511,206 +1516,156 @@ Maximum content size"
               <!-- Rounded -->
               <app-markdown-renderer
                 appearance="primary"
-                shape="rounded"
-                content="# Rounded Shape
-A table example with rounded corners:
-| Header |
-|--------|
-| Content |"
-              ></app-markdown-renderer>
-
-              <app-markdown-renderer
-                appearance="primary"
-                shape="curved"
-                content="# Curved Shape
-A table example with curved corners:
-| Header |
-|--------|
-| Content |"
-              ></app-markdown-renderer>
-
-              <app-markdown-renderer
-                appearance="primary"
-                shape="rectangle"
-                content="# Rectangle Shape
-A table example with rectangle corners:
-| Header |
-|--------|
-| Content |"
-              ></app-markdown-renderer>
-            </div>
-          </div>
-
-          <div class="component-demo">
-            <app-text
-              text="Content Variantions"
-              size="l"
-            ></app-text>
-            <div class="component-group">
-              <!-- Lists -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="m"
-                shape="curved"
-                content="### Lists
-- Unordered list item 1
-- Unordered list item 2
-
-1. Ordered list item 1
-2. Ordered list item 2"
-              ></app-markdown-renderer>
-
-              <!-- Code Blocks -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="m"
-                shape="curved"
-                content="### Code - Javasript
-```javascript
-const hello = 'world';
-console.log(hello);
-```
-"
-              ></app-markdown-renderer>
-
-              <!-- Code Blocks -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="m"
-                shape="curved"
-                content="### Code - Python
-```python
-def example():
-    return 'Hello World'
-```
-"
-              ></app-markdown-renderer>
-
-              <!-- Tables -->
-              <app-markdown-renderer
-                appearance="primary"
                 size="m"
                 shape="rounded"
-                content="### Table
-| Header 1 | Header 2 |
-|----------|----------|
-| Cell 1   | Cell 2   |
-| Cell 3   | Cell 4   |"
-              ></app-markdown-renderer>
-
-              <!-- Mermaid Diagram -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="m"
-                shape="rounded"
-                content="### Mermaid Diagram
+                content="### Rounded Shape
 ```mermaid
 graph TD
-    A[Start] --> B[Process]
-    B --> C[End]
+    A[Start] -->|Rounded| B[End]
+    style A fill:#f9f,stroke:#333,stroke-width:4px,rx:10,ry:10
+    style B fill:#bbf,stroke:#333,stroke-width:4px,rx:10,ry:10
+```"
+              ></app-markdown-renderer>
+
+              <!-- Curved -->
+              <app-markdown-renderer
+                appearance="primary"
+                size="m"
+                shape="curved"
+                content="### Curved Shape
+```mermaid
+graph TD
+    A[Start] -->|Curved| B[End]
+    style A fill:#bbf,stroke:#333,stroke-width:2px,rx:5,ry:5
+    style B fill:#bfb,stroke:#333,stroke-width:2px,rx:5,ry:5
+```"
+              ></app-markdown-renderer>
+
+              <!-- Rectangle -->
+              <app-markdown-renderer
+                appearance="primary"
+                size="m"
+                shape="rectangle"
+                content="### Rectangle Shape
+```mermaid
+graph TD
+    A[Start] -->|Rectangle| B[End]
+    style A fill:#ddd,stroke:#333
+    style B fill:#ddd,stroke:#333
 ```"
               ></app-markdown-renderer>
             </div>
           </div>
 
+          <!-- Markdown Advanced -->
           <div class="component-demo">
             <app-text
-              text="Rich Content"
+              text="Advanced Features"
               size="l"
             ></app-text>
             <div class="component-group">
-              <!-- Rich Content -->
               <app-markdown-renderer
                 appearance="primary"
                 size="m"
-                shape="rounded"
-                content="# Complex Example
-## Subsection
-Regular paragraph with **bold** and *italic* text.
+                shape="curved"
+                content="# Building Scalable Microservices: A Practical Guide
 
-> Blockquote with important information
+## Introduction
+In today's cloud-native world, **microservices architecture** has become the standard for building *scalable*, *maintainable*, and *resilient* applications. Let's explore how to implement this effectively.
 
-> This is a blockquote
-> With multiple lines
+## Key Components
+1. Service Discovery
+2. Load Balancing
+3. Fault Tolerance
+   - Circuit Breakers
+   - Fallbacks
+   - Retries
 
-### Code Example
-```python
-def greet(name):
-    return f'Hello {name}!'
+## Implementation Example
+
+Here's a simple service using Spring Boot:
+
+```java
+@SpringBootApplication
+public class PaymentService {
+    @GetMapping('/api/payment')
+    public Response processPayment(@RequestBody Payment payment) {
+        return paymentGateway.process(payment);
+    }
+}
 ```
 
-### List Items
-1. First ordered item
-2. Second ordered item
-   - Nested unordered item
-   - Another nested item
+### Service Architecture
+```mermaid
+graph TD
+    A[API Gateway] --> B[Auth Service]
+    A --> C[Payment Service]
+    A --> D[Order Service]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bbf,stroke:#333
+    style D fill:#bfb,stroke:#333
+```
 
-### Table Example
-| Name | Role | Status |
-|------|------|--------|
-| John | Dev  | Active |
-| Jane | PM   | Away   |"
-              ></app-markdown-renderer>
-            </div>
-          </div>
+### Service Communication
+The mathematical probability of successful requests can be expressed as:
 
-          <div class="component-demo">
-            <app-text
-              text="Rich Content"
-              size="l"
-            ></app-text>
-            <div class="component-group">
-              <!-- Rich Content -->
-              <app-markdown-renderer
-                appearance="primary"
-                size="m"
-                shape="rounded"
-                content="
-# Math in MDX Example
+\( P(success) = (1 - P(failure))^n \)
 
-This is an example of how to embed **mathematical equations** using MDX.
-
-## Inline Math
-
-You can write inline equations like this:
-\( E = mc^2 \)
-
-This is the famous equation for **energy-mass equivalence** in Einstein's theory of relativity.
-
-## Block Math
-
-Here is a block-level equation:
-
+For a system with 99.9% uptime per service, the total system availability is:
 $$
-\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+System\;Availability = \\
+(0.999)^n
 $$
 
-This is the Gaussian integral, which is used in statistics and physics.
-
-## Another Block Equation
-
-Another example of a block equation is:
-
+Where \( n \) is the number of services. For example, with 3 services:
 $$
-\frac{d}{dx}\left( e^x \right) = e^x
+(0.999)^3 = 0.997
 $$
 
-This is the derivative of the exponential function \( e^x \).
+## Performance Metrics
 
-## Displaying a Matrix
+| Service | Latency (ms) | Uptime (%) |
+|---------|-------------|------------|
+| Auth | 50 | 99.99 |
+| Payment | 100 | 99.95 |
+| Order | 75 | 99.97 |
 
-You can also display matrices like this:
+## Best Practices
 
-$$
-A = \begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{bmatrix}
-$$
+> **Important**: Always implement circuit breakers for inter-service communication to prevent cascade failures.
 
+### Class Structure
+```mermaid
+classDiagram
+    class Service {
+        +handle()
+        +metrics()
+    }
+    class PaymentService {
+        -gateway: Gateway
+        +process()
+    }
+    Service <|-- PaymentService
+```
 
-"
+## Configuration Example
+```yaml
+service:
+  name: payment-service
+  version: 1.0.0
+  endpoints:
+    - /api/payment
+    - /api/refund
+```
+
+## Further Reading
+- [Spring Cloud Documentation](https://spring.io/projects/spring-cloud)
+- [Microservices Patterns](https://microservices.io/patterns)
+- Check our [GitHub Repository](https://github.com/example/microservices)
+
+---
+*Last Updated: March 2024*"
               ></app-markdown-renderer>
             </div>
           </div>
