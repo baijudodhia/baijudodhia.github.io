@@ -324,3 +324,146 @@
   border: 2px solid currentColor;
   border-radius: inherit;
 }
+
+/* Mermaid Diagram Styles */
+.mermaid-diagram {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-disabled-text);
+  font-style: italic;
+}
+
+.mermaid-loading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: mermaid-loading 0.8s linear infinite;
+}
+
+@keyframes mermaid-loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mermaid-error {
+  width: 100%;
+  padding: var(--space-m);
+  color: var(--color-error);
+  background-color: var(--color-error-bg);
+  border: 2px solid var(--color-error);
+  border-radius: inherit;
+}
+
+.mermaid-error p {
+  margin: 0 0 var(--space-s);
+  font-weight: bold;
+}
+
+.mermaid-error pre {
+  margin: 0;
+  padding: var(--space-s);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: calc(inherit / 2);
+  font-family: monospace;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Dark theme support for diagrams */
+@media (prefers-color-scheme: dark) {
+  .mermaid-diagram {
+    background-color: var(--color-bw-dark);
+  }
+
+  .mermaid-diagram .actor {
+    fill: var(--color-primary);
+    stroke: var(--color-primary-text);
+  }
+
+  .mermaid-diagram .messageText {
+    fill: var(--color-primary-text);
+    stroke: none;
+  }
+
+  .mermaid-diagram .messageLine0 {
+    stroke: var(--color-primary);
+  }
+
+  .mermaid-diagram .labelBox {
+    fill: var(--color-primary);
+    stroke: var(--color-primary-text);
+  }
+
+  .mermaid-diagram .labelText {
+    fill: var(--color-primary-text);
+  }
+
+  .mermaid-error {
+    background-color: var(--color-error-bg-dark);
+  }
+}
+
+/* Additional Mermaid theme customizations */
+.mermaid-diagram .node rect,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node polygon,
+.mermaid-diagram .node path {
+  stroke-width: 2px;
+}
+
+.mermaid-diagram .edgePath .path {
+  stroke-width: 2px;
+}
+
+.mermaid-diagram .arrowheadPath {
+  fill-opacity: 0.8;
+}
+
+.mermaid-diagram .flowchart-link {
+  stroke-width: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mermaid-diagram {
+    padding: var(--space-s);
+    font-size: 0.9em;
+  }
+
+  .mermaid-diagram svg {
+    transform-origin: left top;
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .mermaid-diagram svg {
+    transform: scale(0.8);
+  }
+}
