@@ -779,6 +779,9 @@
 
                   // Create categories
                   if (post.category) {
+                    const categoriesContainer = document.createElement("div");
+                    categoriesContainer.setAttribute("style", "display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.5rem; padding: var(--space-xs) 0;");
+
                     post.category.forEach((cat) => {
                       const categoryButton = document.createElement("app-button");
                       categoryButton.setAttribute("label", cat.term);
@@ -786,8 +789,10 @@
                       categoryButton.setAttribute("size", "xs");
                       categoryButton.setAttribute("type", "link");
                       categoryButton.setAttribute("href", `https://baijudodhia.blogspot.com/search/label/${cat.term}?utm_source=baijudodhia.github.io&utm_medium=website`);
-                      bodyContainer.appendChild(categoryButton);
+                      categoriesContainer.appendChild(categoryButton);
                     });
+
+                    bodyContainer.appendChild(categoriesContainer);
                   }
 
                   // Set body content
