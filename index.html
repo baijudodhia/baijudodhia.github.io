@@ -222,6 +222,7 @@
               shape="rounded"
               size="s"
             ></app-button>
+
             <app-button
               icon-left="fas fa-language"
               appearance="mono"
@@ -230,29 +231,30 @@
               size="xl"
               style="color: var(--color-bw-text); border: none !important; padding: 0.25rem 0.5rem; height: max-content"
               tooltip-html='
-              <div style="padding: 1rem; display: flex; flex-direction: column; align-items: stretch;">
-                <app-button
-                  label="English"
-                  style="padding-bottom: 0.5rem; cursor: pointer;"
-                  appearance="link"
-                  onclick="javascript:setLanguage(1)">
-                </app-button>
-                <app-button
-                  label="हिंदी"
-                  style="padding-bottom: 0.5rem; cursor: pointer;"
-                  appearance="link"
-                  onclick="javascript:setLanguage(2)">
-                </app-button>
-                <app-button
-                  label="ગુજરાતી"
-                  style="cursor: pointer;"
-                  appearance="link"
-                  onclick="javascript:setLanguage(3)">
-                </app-button>
-              </div>
+                <div style="padding: 1rem; display: flex; flex-direction: column; align-items: stretch;">
+                  <app-button
+                    label="English"
+                    style="padding-bottom: 0.5rem; cursor: pointer;"
+                    appearance="link"
+                    onclick="javascript:setLanguage(1)">
+                  </app-button>
+                  <app-button
+                    label="हिंदी"
+                    style="padding-bottom: 0.5rem; cursor: pointer;"
+                    appearance="link"
+                    onclick="javascript:setLanguage(2)">
+                  </app-button>
+                  <app-button
+                    label="ગુજરાતી"
+                    style="cursor: pointer;"
+                    appearance="link"
+                    onclick="javascript:setLanguage(3)">
+                  </app-button>
+                </div>
               '
               tooltip-trigger="focusin"
               tooltip-position="bottom"
+              tooltip-interactive="true"
             ></app-button>
             <app-theme-switcher
               style="margin-left: auto !important"
@@ -295,6 +297,7 @@
                     "
                     tooltip-trigger="focusin"
                     tooltip-position="bottom"
+                    tooltip-interactive="true"
                   ></app-button>
                 </div>
                 <app-text
