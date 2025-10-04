@@ -1,12 +1,6 @@
 name: Build and Release
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release version'
-        required: true
-        default: 'v1.0.0'
+on: workflow_dispatch
 
 jobs:
   release:
@@ -29,20 +23,22 @@ jobs:
         run: git add -f lib/dist/
 
       - name: Configure git
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+        run: git config user.name github-actions
+
+      - name: Configure git email
+        run: git config user.email github-actions@github.com
 
       - name: Create release branch
-        run: |
-          git checkout -B release
+        run: git checkout -b release
+
+      - name: Add other files
+        run: git add .
+
+      - name: Remove node_modules
+        run: git reset -- node_modules/
 
       - name: Commit changes
-        run: |
-          git commit -m "release@${{ github.event.inputs.version }}" || echo "No changes to commit"
+        run: git commit -m "release@${{ github.event.inputs.version }}"
 
       - name: Push release branch
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: release
+        run: git push -f origin release
