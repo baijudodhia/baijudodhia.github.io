@@ -1,6 +1,6 @@
 {
   "short_name": "Baiju Dodhia",
-  "name": "Baiju Dodhia | Portfolio | Blog",
+  "name": "Baiju Dodhia | Portfolio",
   "icons": [
     {
       "src": "./favicons/favicon.ico",
@@ -57,7 +57,7 @@
   "id": ".",
   "shortcuts": [
     {
-      "name": "Baiju Dodhia | Portfolio | Blog",
+      "name": "Baiju Dodhia | Portfolio",
       "url": "/",
       "description": "Software Engineer in JavaScript, Python and Web Development with great flexibility of learning and adapting to any programming language or technology.",
       "icons": [

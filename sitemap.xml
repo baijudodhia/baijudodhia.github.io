@@ -7,14 +7,14 @@
     <loc>https://baijudodhia.github.io/</loc>
     <priority>1.00</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://baijudodhia.github.io/blog/</loc>
     <priority>0.80</priority>
-  </url>
-  <url>
+  </url> -->
+  <!-- <url>
     <loc>https://baijudodhia.blogspot.com/</loc>
     <priority>0.80</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://www.github.com/baijudodhia/</loc>
     <priority>0.80</priority>
