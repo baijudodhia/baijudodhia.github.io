@@ -39,14 +39,19 @@
             ]
         },
         {
-            "category": "Cloud & DevOps",
+            "category": "Cloud, DevOps & Tools",
             "list": [
                 "AWS (EC2, S3, SQS, RDS, ECR)",
                 "Docker",
                 "Jenkins",
                 "Bitbucket Pipelines",
                 "Nginx",
-                "Gunicorn"
+                "Gunicorn",
+                "Cursor",
+                "GitHub Copilot",
+                "Postman",
+                "Sentry",
+                "Git"
             ]
         },
         {
@@ -57,16 +62,6 @@
                 "Server-Driven UI",
                 "RBAC/IAM",
                 "Rule Engine (BRE)"
-            ]
-        },
-        {
-            "category": "Developer Tools",
-            "list": [
-                "Cursor (AI IDE)",
-                "GitHub Copilot",
-                "Postman",
-                "Sentry",
-                "Git"
             ]
         },
         {
