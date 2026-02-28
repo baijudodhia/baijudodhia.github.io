@@ -21,9 +21,9 @@ class WhatIDoComponent extends HTMLElement {
             <app-button
               appearance="link"
               type="link"
-              label="BloomBox, E-Cell KJSCE"
-              title="BloomBox, E-Cell KJSCE"
-              href="https://www.bloomboxkjsce.com/"
+              label="BloomBox (E-Cell KJSCE)"
+              title="BloomBox (E-Cell KJSCE)"
+              href="https://www.instagram.com/bloombox_kjsce/"
             ></app-button>
             ,&nbsp;<br />
             <app-button
@@ -31,7 +31,7 @@ class WhatIDoComponent extends HTMLElement {
               type="link"
               label="RedShift Racing India"
               title="RedShift Racing India"
-              href="http://www.redshift-racing.in/"
+              href="https://www.instagram.com/redshift_racing/"
             ></app-button>
             ,&nbsp;<br />
             <app-button
@@ -39,14 +39,14 @@ class WhatIDoComponent extends HTMLElement {
               type="link"
               label="CSI KJSCE"
               title="CSI KJSCE"
-              href="https://www.csikjsce.org/"
+              href="https://www.instagram.com/csikjsce/"
             ></app-button>
             ,&nbsp;<br />
             <app-button
               appearance="link"
               type="link"
-              label="Hult Prize Somaiya"
-              title="Hult Prize Somaiya"
+              label="Hult Prize at Somaiya"
+              title="Hult Prize at Somaiya"
               href="https://www.hultprize.org/"
             ></app-button>
           </div>
@@ -134,13 +134,13 @@ class WhatIDoComponent extends HTMLElement {
    * 1. Browser calls this method when the element is added to the document.
    * 2. Can be called many times if an element is repeatedly added/removed.
    */
-  connectedCallback() {}
+  connectedCallback() { }
 
   /**
    * 1. Browser calls this method when the element is removed from the document.
    * 2. Can be called many times if an element is repeatedly added/removed.
    */
-  disconnectedCallback() {}
+  disconnectedCallback() { }
 
   connectedCallback() {
     // browser calls this method when the element is added to the document

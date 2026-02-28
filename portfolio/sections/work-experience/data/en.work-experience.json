@@ -1,68 +1,57 @@
 {
-  "header": {
-    "title": "Work Experience"
-  },
-  "items": [
-    {
-      "company": {
-        "logo": "./portfolio/assets/images/org-logo/think360.svg",
-        "name": "Think Analytics",
-        "location": "Mumbai, MH",
-        "industry": "FinTech",
-        "domain": "Web Applications"
-      },
-      "positions": [
+    "header": {
+        "title": "Work Experience"
+    },
+    "items": [
         {
-          "id": "frontend-engineer",
-          "profile": "Senior Software Engineer",
-          "fromDate": "April 2023",
-          "toDate": "*",
-          "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Managed the frontend team for the product development of KwikID, a SaaS product serving the BFSI industry for Video KYC and Customer Onboarding flows.</li><li>Primarily focused on developing new features, re-architecting, and refactoring the existing codebase, setting up new processes and managing the team in designing secure, efficient, and scalable solutions to enhance the end-customer experience.</li><li>Notably, some of my key development contributions, including the creation of new libraries integral to the product, played a crucial role in driving substantial sales growth.</li></ul>"
+            "company": {
+                "logo": "./portfolio/assets/images/org-logo/think360.svg",
+                "name": "Think360.ai (A CAMS Company)",
+                "location": "Mumbai, India",
+                "industry": "FinTech",
+                "domain": "KYC, Lending, Digital Identity"
+            },
+            "positions": [
+                {
+                    "id": "technical-lead",
+                    "profile": "Technical Lead",
+                    "fromDate": "Oct 2025",
+                    "toDate": "*",
+                    "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Lead technical direction for a team of 7–8 engineers; drive architectural reviews and maintain consistency across micro-services and internal tooling.</li><li>Formalized infrastructure cost optimization: S3 lifecycle and EC2 cleanup reduced storage costs by ~90%.</li><li>Mentor engineers on system design, production debugging, and scalability tradeoffs.</li></ul>"
+                },
+                {
+                    "id": "senior-software-engineer",
+                    "profile": "Senior Software Engineer",
+                    "fromDate": "Apr 2023",
+                    "toDate": "Sep 2025",
+                    "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Led migration of core CKYC platform from single-tenant to multi-tenant SaaS and decoupled Celery workers for async workloads; system processes 5,000+ compute-intensive tasks daily.</li><li>Designed and built Bolt, an internal Python framework standardizing AWS, DB, Rule Engine and logging integrations; reduced new-service setup time from ~3 days to ~4 hours for a 15+ engineering team.</li><li>Architected and delivered an on-premise Video KYC system using LiveKit (WebRTC) for real-time multi-party sessions, meeting strict banking data-sovereignty and on-prem compliance requirements.</li><li>Owned RBL Bank backend migration from Python 2.7 to 3.8 and technical issues, reducing production support tickets by ~80%.</li><li>Led Dockerization of backend services and introduced CI/CD automation via bash-based pipelines, reducing manual deployment effort and configuration drift across enterprise client environments.</li><li>Built configuration-driven KYC form systems that decoupled business logic from code, enabling non-engineering teams to launch new flows without backend changes.</li></ul>"
+                },
+                {
+                    "id": "software-engineer",
+                    "profile": "Software Engineer",
+                    "fromDate": "Jul 2021",
+                    "toDate": "Mar 2023",
+                    "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Led frontend development for lending platforms (OneApp, Upsell) in React.js; increased unit test coverage to 100%, improving regression stability during frequent product iterations.</li><li>Built a scalable, JSON-config-driven form engine for KwikID so edge cases were handled through configuration instead of code changes.</li><li>Refactored legacy Angular apps into a modular, component-based structure and took on full-stack work—backend APIs and fixes in Python and SQL.</li></ul>"
+                }
+            ]
         },
         {
-          "id": "frontend-engineer",
-          "profile": "Associate Frontend Engineer",
-          "fromDate": "July 2021",
-          "toDate": "March 2023",
-          "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Led the development of frontend web applications, with a key focus on crafting seamless UI/UX for Lending Journeys using React.js. Additionally, contributed to development of backend APIs using Python Flask.</li></ul>"
+            "company": {
+                "logo": "./portfolio/assets/images/org-logo/fogr.svg",
+                "name": "FoGR Tech.",
+                "location": "Remote (Hyderabad, India)",
+                "industry": "E-Commerce",
+                "domain": "Web Applications"
+            },
+            "positions": [
+                {
+                    "id": "backend-intern",
+                    "profile": "Backend Software Development Intern",
+                    "fromDate": "Sept 2020",
+                    "toDate": "Nov 2020",
+                    "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Delivered three integrated web applications (customer, admin, delivery) with Node.js and Angular; integrated real-time messaging (PubNub), payments (Stripe), and document storage (MongoDB Atlas).</li></ul>"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "company": {
-        "logo": "./portfolio/assets/images/org-logo/fogr.svg",
-        "name": "FoGR Tech.",
-        "location": "Hyderabad, TS [WFH]",
-        "industry": "E-Commerce",
-        "domain": "Web/Mobile Applications"
-      },
-      "positions": [
-        {
-          "id": "frontend-engineer",
-          "profile": "SDE Intern",
-          "fromDate": "Sept 2020",
-          "toDate": "Nov 2020",
-          "description": "<div>Worked on 2 applications - </div><ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Food Delivery App: Built backend for Android/iOS application using Angular Ionic Framework for integration with UI, Firebase for Realtime Database and User Authentication.</li><li>Delivery Package Returning App: Developed 3 integrated web applications (customer, admin and delivery agent) using Angular for UI, Node.js for backend and REST API, PubNub for real-time notifications, Stripe for Payments and MongoDB Atlas for Cloud-based Document Database.</li></ul>"
-        }
-      ]
-    },
-    {
-      "company": {
-        "logo": "./portfolio/assets/images/org-logo/kjsce.svg",
-        "name": "KJSCE",
-        "location": "Mumbai, MH",
-        "industry": "Productivity Tools",
-        "domain": "Browser Extension"
-      },
-      "positions": [
-        {
-          "id": "frontend-engineer",
-          "profile": "SDE Intern",
-          "fromDate": "April 2020",
-          "toDate": "June 2020",
-          "description": "<div>Worked on development of Browser Extension -</div><ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Worked on development of Chromium-browser based extension for Gmail for extracting information and generating summary from email threads using Node.js and Gmail.js</li><li>Achieved 100% results for extracting information like email ids and website URLs mentioned in the email thread.</li><li>Generated a 3 point extractive summary of email thread using cosine similarity measures.</li></ul>"
-        }
-      ]
-    }
-  ]
+    ]
 }

@@ -1,68 +1,81 @@
 {
-  "header": {
-    "title": "Skills"
-  },
-  "items": [
-    {
-      "category": "Languages",
-      "list": [
-        "JavaScript",
-        "Python",
-        "Java",
-        "HTML/CSS"
-      ]
+    "header": {
+        "title": "Skills"
     },
-    {
-      "category": "Frameworks & Libraries",
-      "list": [
-        "Bootstrap",
-        "Material",
-        "React",
-        "Angular",
-        "Node.js",
-        "Django",
-        "Flask"
-      ]
-    },
-    {
-      "category": "Databases",
-      "list": [
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Firebase"
-      ]
-    },
-    {
-      "category": "Tools",
-      "list": [
-        "Git",
-        "VSCode",
-        "Android Studio",
-        "Jira",
-        "Asana",
-        "Github",
-        "Bitbucket"
-      ]
-    },
-    {
-      "category": "Cloud Tech",
-      "list": [
-        "AWS S3",
-        "AWS EC2",
-        "AWS DynamoDB",
-        "AWS RDS",
-        "AWS IAM",
-        "AWS SQS",
-        "AWS CloudWatch"
-      ]
-    },
-    {
-      "category": "Platforms",
-      "list": [
-        "Web",
-        "Mobile"
-      ]
-    }
-  ]
+    "items": [
+        {
+            "category": "Languages",
+            "list": [
+                "Python",
+                "JavaScript / TypeScript",
+                "SQL",
+                "Bash"
+            ]
+        },
+        {
+            "category": "Frameworks & Libraries",
+            "list": [
+                "React.js",
+                "Angular",
+                "Node.js",
+                "Django",
+                "Flask",
+                "Celery",
+                "Boto3",
+                "Pandas",
+                "WebSockets",
+                "LiveKit"
+            ]
+        },
+        {
+            "category": "Databases",
+            "list": [
+                "PostgreSQL",
+                "ScyllaDB",
+                "DynamoDB",
+                "MongoDB",
+                "MySQL",
+                "Firebase"
+            ]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "list": [
+                "AWS (EC2, S3, SQS, RDS, ECR)",
+                "Docker",
+                "Jenkins",
+                "Bitbucket Pipelines",
+                "Nginx",
+                "Gunicorn"
+            ]
+        },
+        {
+            "category": "System Architecture",
+            "list": [
+                "Microservices",
+                "Multi-Tenant Architecture",
+                "Server-Driven UI",
+                "RBAC/IAM",
+                "Rule Engine (BRE)"
+            ]
+        },
+        {
+            "category": "Developer Tools",
+            "list": [
+                "Cursor (AI IDE)",
+                "GitHub Copilot",
+                "Postman",
+                "Sentry",
+                "Git"
+            ]
+        },
+        {
+            "category": "Domain Expertise",
+            "list": [
+                "Fintech (KYC, Lending, Digital Identity)",
+                "Data Sovereignty",
+                "Regulated Enterprise Workflows"
+            ]
+        }
+    ]
 }

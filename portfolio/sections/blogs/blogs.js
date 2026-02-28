@@ -196,7 +196,7 @@ class BlogComponent extends HTMLElement {
   async fetchData() {
     this.addSectionLoader();
 
-    const feedUrl = "https://baijudodhia.blogspot.com/feeds/posts/default?alt=rss";
+    const feedUrl = "https://thetechdope.blogspot.com/feeds/posts/default?alt=rss";
     const response = await fetch(feedUrl, { mode: "no-cors" });
     const xmlText = await response.text();
     const xml = await new window.DOMParser().parseFromString(xmlText, "text/xml");
@@ -272,7 +272,7 @@ class BlogComponent extends HTMLElement {
                   const clone = template.content.cloneNode(true);
                   clone
                     .querySelector("#blog-tag")
-                    .setAttribute("href", `https://baijudodhia.blogspot.com/search/label/${tag}`);
+                    .setAttribute("href", `https://thetechdope.blogspot.com/search/label/${tag}`);
                   clone.querySelector("#blog-tag").setAttribute("label", tag);
 
                   container.append(clone);
@@ -326,7 +326,7 @@ class BlogComponent extends HTMLElement {
     //         var blogTagTemplateClone = blogTagTemplate.content.cloneNode(true);
     //         blogTagTemplateClone
     //           .querySelector(".blog-tag")
-    //           .setAttribute("href", `https://baijudodhia.blogspot.com/search/label/${tag}`);
+    //           .setAttribute("href", `https://thetechdope.blogspot.com/search/label/${tag}`);
     //         blogTagTemplateClone.querySelector(".blog-tag").innerText = tag;
     //
     //         container.append(blogTagTemplateClone);
