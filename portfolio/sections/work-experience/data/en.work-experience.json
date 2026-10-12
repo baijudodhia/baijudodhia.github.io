@@ -5,6 +5,24 @@
     "items": [
         {
             "company": {
+                "logo": "./portfolio/assets/images/org-logo/nvidia.svg",
+                "name": "NVIDIA",
+                "location": "Pune, India",
+                "industry": "Semiconductors",
+                "domain": "Automation, Gaming"
+            },
+            "positions": [
+                {
+                    "id": "senior-engineer-tools",
+                    "profile": "Senior Engineer - Tools",
+                    "fromDate": "Jun 2026",
+                    "toDate": "*",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "company": {
                 "logo": "./portfolio/assets/images/org-logo/think360.svg",
                 "name": "Think360.ai (A CAMS Company)",
                 "location": "Mumbai, India",
@@ -16,7 +34,7 @@
                     "id": "technical-lead",
                     "profile": "Technical Lead",
                     "fromDate": "Oct 2025",
-                    "toDate": "*",
+                    "toDate": "May 2026",
                     "description": "<ul style=\"list-style-type: disc; margin-left: 0.5rem; padding-left: 1rem\"><li>Lead technical direction for a team of 7–8 engineers; drive architectural reviews and maintain consistency across micro-services and internal tooling.</li><li>Formalized infrastructure cost optimization: S3 lifecycle and EC2 cleanup reduced storage costs by ~90%.</li><li>Mentor engineers on system design, production debugging, and scalability tradeoffs.</li></ul>"
                 },
                 {

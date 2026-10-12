@@ -18,15 +18,15 @@ class AboutComponent extends HTMLElement {
           </div>
         </h1>
         <div>
-          Platform & Backend Engineer building resilient, multi-tenant systems in FinTech and regulated domains. Focused on scalable architecture, infrastructure reliability, and high-trust system design.
+          Platform & Backend Engineer building resilient, multi-tenant systems. Focused on scalable architecture, infrastructure reliability, and high-trust system design.
         </div>
         <div class="about-profile">
-          Currently working as Technical Lead at
+          Currently working as Senior Engineer at
           <app-button
             appearance="link"
-            label="Think360.ai"
+            label="NVIDIA"
             type="link"
-            href="https://www.think360.ai/"
+            href="https://www.nvidia.com/"
           ></app-button>
         </div>
         <app-social-links
