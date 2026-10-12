@@ -1243,6 +1243,284 @@
           </div>
         </section>
 
+        <!-- Search Box -->
+        <section
+          id="section-search-box"
+          class="section"
+        >
+          <app-text
+            style="font-weight: bold; padding: 0.5rem 0px"
+            text="Search Box"
+            size="xl"
+          ></app-text>
+          <app-text
+            text="Press Ctrl K (or Cmd K on a Mac) anywhere on the page to open the palette. Type to filter, use the arrow keys to move and Enter to run."
+            size="m"
+          ></app-text>
+
+          <div class="component-demo">
+            <app-text
+              text="Appearances"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box appearance="primary"></app-search-box>
+              <app-search-box appearance="secondary"></app-search-box>
+              <app-search-box appearance="tertiary"></app-search-box>
+              <app-search-box appearance="outlined"></app-search-box>
+              <app-search-box appearance="mono"></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Sizes"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box size="xl"></app-search-box>
+              <app-search-box size="l"></app-search-box>
+              <app-search-box size="m"></app-search-box>
+              <app-search-box size="s"></app-search-box>
+              <app-search-box size="xs"></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Shapes"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                appearance="primary"
+                shape="rounded"
+              ></app-search-box>
+              <app-search-box
+                appearance="primary"
+                shape="curved"
+              ></app-search-box>
+              <app-search-box
+                appearance="primary"
+                shape="rectangle"
+              ></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Variants"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                variant="button"
+                appearance="primary"
+              ></app-search-box>
+              <app-search-box
+                variant="icon"
+                appearance="primary"
+              ></app-search-box>
+              <app-search-box
+                variant="input"
+                label="Search the library..."
+              ></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Label, icon and shortcut"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                label="Find a component"
+                icon-left="fas fa-puzzle-piece"
+                shortcut="alt+shift+f"
+                appearance="secondary"
+              ></app-search-box>
+              <app-search-box
+                label="No shortcut hint"
+                show-shortcut="false"
+              ></app-search-box>
+              <app-search-box
+                label="No shortcut at all"
+                shortcut=""
+              ></app-search-box>
+              <app-search-box
+                label="Slash also opens"
+                slash-shortcut="true"
+                shortcut="mod+j"
+              ></app-search-box>
+              <app-search-box
+                label="Disabled"
+                disabled="true"
+              ></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Actions from a JSON attribute"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                id="search-box-demo-actions"
+                label="Links and events"
+                appearance="primary"
+                shortcut="mod+k"
+                modal-label="Links and events"
+                placeholder="Open a link or fire an event"
+                actions='[
+                  { "label": "Portfolio", "hint": "link", "group": "Links", "icon": "fas fa-user", "href": "https://baijudodhia.github.io/" },
+                  { "label": "Blog", "hint": "link", "group": "Links", "icon": "fas fa-rss", "href": "https://thetechdope.blogspot.com/", "keywords": ["articles", "posts"] },
+                  { "label": "GitHub", "hint": "link", "group": "Links", "icon": "fab fa-github", "href": "https://github.com/baijudodhia" },
+                  { "label": "Say hello", "hint": "event", "group": "Events", "icon": "fas fa-hand-paper", "event": "say-hello", "detail": { "message": "Hello from the search box" } },
+                  { "label": "Scroll to the sources demo", "hint": "section", "group": "Events", "selector": "#search-box-demo-sources" }
+                ]'
+              ></app-search-box>
+              <app-text
+                id="search-box-demo-log"
+                text="Selected action: none yet"
+                size="m"
+              ></app-text>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Actions discovered from the page (sources)"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                label="Jump to a block"
+                appearance="tertiary"
+                shortcut="mod+shift+k"
+                sources="[data-demo-block]"
+                source-hint="block"
+                source-group="Blocks on this page"
+                scroll-offset="16"
+                match="fuzzy"
+              ></app-search-box>
+            </div>
+            <div
+              id="search-box-demo-sources"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1rem"
+            >
+              <app-card
+                data-demo-block
+                data-search-label="Alpha block"
+                data-search-keywords="first"
+                appearance="primary"
+                body="<app-text text='Alpha block'></app-text>"
+              ></app-card>
+              <app-card
+                data-demo-block
+                data-search-label="Beta block"
+                data-search-keywords="second"
+                appearance="secondary"
+                body="<app-text text='Beta block'></app-text>"
+              ></app-card>
+              <app-card
+                data-demo-block
+                data-search-label="Gamma block"
+                data-search-keywords="third"
+                appearance="tertiary"
+                body="<app-text text='Gamma block'></app-text>"
+              ></app-card>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Palette options"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                label="Centered, no blur"
+                modal-position="center"
+                backdrop="dim"
+                modal-width="28rem"
+                max-results="3"
+                match="starts-with"
+                show-footer="false"
+                empty-text="No match. Try typing the start of a word."
+                actions='[
+                  { "label": "Apple", "hint": "fruit", "href": "https://example.com/apple" },
+                  { "label": "Apricot", "hint": "fruit", "href": "https://example.com/apricot" },
+                  { "label": "Avocado", "hint": "fruit", "href": "https://example.com/avocado" },
+                  { "label": "Banana", "hint": "fruit", "href": "https://example.com/banana" },
+                  { "label": "Blueberry", "hint": "fruit", "href": "https://example.com/blueberry" }
+                ]'
+              ></app-search-box>
+              <app-search-box
+                label="Stay open after selecting"
+                close-on-select="false"
+                show-hints="false"
+                footer-text="The palette stays open after you pick something"
+                actions='[
+                  { "label": "First", "event": "demo-picked" },
+                  { "label": "Second", "event": "demo-picked" }
+                ]'
+              ></app-search-box>
+            </div>
+          </div>
+
+          <div class="component-demo">
+            <app-text
+              text="Programmatic API"
+              size="l"
+            ></app-text>
+            <div class="component-group">
+              <app-search-box
+                id="search-box-demo-api"
+                label="Set from JavaScript"
+                appearance="secondary"
+              ></app-search-box>
+              <app-button
+                label="Open"
+                appearance="primary"
+                size="s"
+                onclick="document.querySelector('#search-box-demo-api').open()"
+              ></app-button>
+              <app-button
+                label="Add an action"
+                appearance="outlined"
+                size="s"
+                onclick="document.querySelector('#search-box-demo-api').addAction({ label: 'Added at ' + new Date().toLocaleTimeString(), hint: 'run', run: () => alert('Added action ran') })"
+              ></app-button>
+            </div>
+          </div>
+
+          <script>
+            (() => {
+              const log = document.querySelector("#search-box-demo-log");
+              const actionsDemo = document.querySelector("#search-box-demo-actions");
+              if (actionsDemo && log) {
+                actionsDemo.addEventListener("search-box-select", (event) => {
+                  log.setAttribute("text", `Selected action: ${event.detail.action.label}`);
+                });
+                actionsDemo.addEventListener("say-hello", (event) => {
+                  log.setAttribute("text", event.detail.message);
+                });
+              }
+
+              // The custom element is defined by a deferred module, so wait before calling its methods
+              const apiDemo = document.querySelector("#search-box-demo-api");
+              if (apiDemo) {
+                customElements.whenDefined("app-search-box").then(() => apiDemo.setActions([
+                  { label: "Run a function", hint: "run", run: () => alert("Function ran") },
+                  { label: "Open the example site", hint: "link", href: "https://example.com" },
+                ]));
+              }
+            })();
+          </script>
+        </section>
+
         <!-- Code Block -->
         <section
           id="section-code-block"

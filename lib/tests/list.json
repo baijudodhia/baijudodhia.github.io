@@ -39,6 +39,11 @@
         "description": "Color selection control"
       },
       {
+        "component": "search-box",
+        "label": "Search Box",
+        "description": "Keyboard-driven search and jump palette"
+      },
+      {
         "component": "theme-switcher",
         "label": "Theme Switcher",
         "description": "Toggle between light/dark themes"

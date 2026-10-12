@@ -27,3 +27,11 @@ window.goTop = function () {
   const element = document.querySelector(".body");
   element.scrollTop = 0;
 };
+
+// Search box: the "Switch theme" action. Same behaviour as the theme switcher component.
+document.querySelector("app-search-box")?.addEventListener("toggle-theme", () => {
+  const root = document.documentElement;
+  const theme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", theme);
+  root.setAttribute("data-theme", theme);
+});

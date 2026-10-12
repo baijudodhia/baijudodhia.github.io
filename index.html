@@ -215,6 +215,29 @@
             <div class="header-waving-hand">👋</div>
           </div>
           <div class="header-right">
+            <app-search-box
+              label="Search"
+              appearance="outlined"
+              shape="rounded"
+              size="s"
+              placeholder="Jump to a section, open a link, switch theme"
+              modal-label="Search and jump"
+              sources="[data-search-label]"
+              source-hint="section"
+              source-group="Sections"
+              scroll-offset="80"
+              actions='[
+                { "label": "Open LinkedIn", "hint": "link", "group": "Links", "href": "https://www.linkedin.com/in/baijudodhia/?utm_source=baijudodhia.github.io&amp;utm_medium=website" },
+                { "label": "Open GitHub", "hint": "link", "group": "Links", "href": "https://github.com/baijudodhia/?utm_source=baijudodhia.github.io&amp;utm_medium=website" },
+                { "label": "Switch theme", "hint": "action", "group": "Actions", "event": "toggle-theme" },
+                { "label": "Back to top", "hint": "action", "group": "Actions", "call": "goTop" },
+                { "label": "Search for Baiju on Google", "hint": "search", "group": "Search for me", "href": "https://www.google.com/search?q=%22Baiju%C2%A0Dodhia%22%C2%A0OR%C2%A0%22baijudodhia%22" },
+                { "label": "Search for Baiju on Bing", "hint": "search", "group": "Search for me", "href": "https://www.bing.com/search?q=%22Baiju%C2%A0Dodhia%22%C2%A0OR%C2%A0%22baijudodhia%22" },
+                { "label": "Search for Baiju on Brave", "hint": "search", "group": "Search for me", "href": "https://search.brave.com/search?q=baijudodhia" },
+                { "label": "Search for Baiju on DuckDuckGo", "hint": "search", "group": "Search for me", "href": "https://duckduckgo.com/?q=Baiju%C2%A0Dodhia&amp;ia=web" }
+              ]'
+            ></app-search-box>
+
             <app-button
               label="Install"
               appearance="primary"
@@ -331,7 +354,11 @@
               </div>
             </div>
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="what-i-do"
+              data-search-label="What I Do?"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-weight: bold">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start">
                   <app-text
@@ -413,7 +440,11 @@
 
             <hr style="align-self: stretch; margin: 0px; border: none; border-top: 2px dashed var(--color-bw-text); height: 0px; background-color: transparent" />
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="skills"
+              data-search-label="Skills"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-weight: bold">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start">
                   <app-text
@@ -465,7 +496,11 @@
 
             <hr style="align-self: stretch; margin: 0px; border: none; border-top: 2px dashed var(--color-bw-text); height: 0px; background-color: transparent" />
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="work-experience"
+              data-search-label="Work Experience"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; font-weight: bold; width: 100%">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start">
                   <app-text
@@ -577,7 +612,11 @@
 
             <hr style="align-self: stretch; margin: 0px; border: none; border-top: 2px dashed var(--color-bw-text); height: 0px; background-color: transparent" />
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="projects"
+              data-search-label="Projects"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-weight: bold">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%">
                   <app-text
@@ -628,7 +667,11 @@
 
             <hr style="align-self: stretch; margin: 0px; border: none; border-top: 2px dashed var(--color-bw-text); height: 0px; background-color: transparent" />
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="insights"
+              data-search-label="Insights"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-weight: bold; width: 100%">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%">
                   <app-text
@@ -800,7 +843,11 @@
 
             <hr style="align-self: stretch; margin: 0px; border: none; border-top: 2px dashed var(--color-bw-text); height: 0px; background-color: transparent" />
 
-            <div class="section-group">
+            <div
+              class="section-group"
+              id="certifications"
+              data-search-label="Certifications"
+            >
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-weight: bold; width: 100%">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%">
                   <app-text
